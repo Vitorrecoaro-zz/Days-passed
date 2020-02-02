@@ -1,7 +1,11 @@
 import time
 
-startDate = int(input("Exemplo de data a ser digitada 1122000, que será o mesmo que 01\\12\\2000\nDigite a data inicial: "))
-currentDate = int(input("Exemplo de data a ser digitada 1122000, que será o mesmo que 01\\12\\2000\nDigite a data final: "))
+startDate = input("Exemplo de data a ser digitada 1 12 2000, que será o mesmo que 01\\12\\2000\nDigite a data inicial: ")
+currentDate = input("Exemplo de data a ser digitada 1 12 2000, que será o mesmo que 01\\12\\2000\nDigite a data final: ")
+startDate = startDate.replace(" ","")
+startDate = int(startDate)
+currentDate = currentDate.replace(" ","")
+currentDate = int(currentDate)
 startYear = startDate%10000
 startDate = startDate//10000
 startMonth = startDate%100
